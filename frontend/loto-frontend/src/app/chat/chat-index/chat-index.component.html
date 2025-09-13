@@ -1,0 +1,12 @@
+<div class="page-container">
+  <div class="conversation-container">
+    <pre>{{ conversation[1].content }}</pre>
+  </div>
+  <div class="input-container">
+    <mat-form-field class="form-field">
+      <mat-label>Message</mat-label>
+      <input matInput #message maxlength="256" placeholder="Ex. I need help with...">
+      <mat-hint><strong>Don't disclose personal info</strong> </mat-hint>
+  </mat-form-field>
+  </div>
+</div>
