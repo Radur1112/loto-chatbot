@@ -1,26 +1,28 @@
 <div class="content" [class.is-mobile]="isMobile()">
-    <mat-toolbar class="toolbar" *ngIf="isMobile()">
+  @if (isMobile()) {
+    <mat-toolbar class="toolbar">
       <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
       <h1>Responsive App</h1>
     </mat-toolbar>
+  }
 
-    <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="isMobile() ? 56 : 0">
-      <mat-sidenav #snav class="sidenav" [mode]="isMobile() ? 'over' : 'side'" [opened]="!isMobile()" [fixedInViewport]="isMobile()" fixedTopGap="56">
-        
-        <div class="side">
-          <app-side-menu />
-        </div>
-      </mat-sidenav>
+  <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="isMobile() ? 56 : 0">
+    <mat-sidenav #snav class="sidenav" [mode]="isMobile() ? 'over' : 'side'" [opened]="!isMobile()" [fixedInViewport]="isMobile()" fixedTopGap="56">
 
-      <mat-sidenav-content class="sidenav-content">
-        <div class="main">
-          <div class="header">
-            <app-header />
-          </div>
-          <div class="chat">
-            <router-outlet />
-          </div>
+      <div class="side">
+        <app-side-menu />
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="sidenav-content">
+      <div class="main">
+        <div class="header">
+          <app-header />
         </div>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-  </div>
+        <div class="chat">
+          <router-outlet />
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

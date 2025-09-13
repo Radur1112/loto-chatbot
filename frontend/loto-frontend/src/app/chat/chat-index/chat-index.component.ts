@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-chat-index',
-  imports: [CommonModule, FormsModule, MatFormFieldModule, MatInputModule],
+  imports: [FormsModule, MatFormFieldModule, MatInputModule],
   templateUrl: './chat-index.component.html',
   styleUrl: './chat-index.component.scss'
 })

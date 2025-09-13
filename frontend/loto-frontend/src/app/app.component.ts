@@ -6,11 +6,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SideMenuComponent, HeaderComponent, CommonModule, MatSidenavModule, MatToolbarModule, MatIconModule],
+  imports: [RouterOutlet, SideMenuComponent, HeaderComponent, MatSidenavModule, MatToolbarModule, MatIconModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
